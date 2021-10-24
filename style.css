@@ -1,6 +1,6 @@
 :root {
   --clr-desaturated-red: hsl(0, 36%, 70%);
-  --clr-desaturated-red-transparent: hsla(0, 36%, 70%, 0.5);
+  --clr-light-desaturated-red: hsl(0, 79%, 87%);
   --clr-soft-red: hsl(0, 93%, 68%);
   --clr-dark-grayish-red: hsl(0, 6%, 24%);
   --grd-primary: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
@@ -37,14 +37,12 @@ body {
   background: var(--grd-primary);
   color: var(--clr-desaturated-red);
   text-align: center;
-  /*padding: 1rem;*/
 }
 
 main {
   display: flex;
   flex-direction: column;
   margin: auto;
-  /*margin-top: 5rem;*/
   min-width: 320px;
   max-width: 500px;
 }
@@ -53,7 +51,6 @@ main {
   grid-area: first-box;
   order: 1;
   padding: 1rem 2rem;
-  /*padding-left: 2rem;*/
   display: flex;
   height: 80px;
   align-items: center;
@@ -65,7 +62,7 @@ main {
   margin-left: auto;
 }
 
-.header{
+.header {
   grid-area: third-box;
   order: 2;
   background-image: url("images/hero-mobile.jpg");
@@ -78,8 +75,6 @@ main {
   grid-area: second-box;
   order: 3;
   padding: 4rem 2rem;
-  /*display: flex;*/
-  /*flex-direction: column;*/
 }
 
 .subtitle {
@@ -105,6 +100,23 @@ main {
   padding: 0.8rem 1.6rem;
 }
 
+.outline-error {
+  outline: var(--clr-soft-red) auto 3px;
+}
+
+.icon-error {
+  background-size: contain;
+  width: 20px;
+  object-fit: contain;
+  margin-right: 40px;
+  display: none;
+}
+
+.text-error {
+  text-align: left;
+  color: var(--clr-soft-red);
+  margin: 0.8rem 1.6rem;
+}
 
 ::placeholder {
   color: hsla(0, 36%, 70%, 0.5);
@@ -118,8 +130,7 @@ main {
   background-color: transparent;
   border-top-left-radius: 5rem;
   border-bottom-left-radius: 5rem;
-  border: 1px solid var(--clr-desaturated-red-transparent);
-  /*opacity: 0.5;*/
+  border: 1px solid var(--clr-light-desaturated-red);
 }
 
 .contact input[type=email]:focus-visible {
@@ -127,10 +138,18 @@ main {
 }
 
 .contact input[type=image] {
+  object-fit: contain;
   margin-left: -20px;
   border-radius: 5rem;
   background: var(--grd-secondary);
-  box-shadow: 0 10px 20px var(--clr-desaturated-red-transparent);
+  background-color: hsl(0, 74%, 74%);
+  box-shadow: 0 10px 20px var(--clr-light-desaturated-red);
+  transition: all 0.4s ease-in-out;
+}
+
+.contact input[type=image]:hover {
+  background: var(--clr-light-desaturated-red);
+  box-shadow: 0 10px 20px hsl(0, 43%, 79%);
 }
 
 @media screen and (min-width: 1000px) {
@@ -143,7 +162,6 @@ main {
   }
 
   body {
-    /*background: red;*/
     text-align: left;
   }
 
@@ -186,5 +204,11 @@ main {
 
   ::placeholder {
     font-size: 1.2em;
+  }
+
+  .text-error {
+    text-align: left;
+    color: var(--clr-soft-red);
+    margin: 0.5rem 2.5rem;
   }
 }

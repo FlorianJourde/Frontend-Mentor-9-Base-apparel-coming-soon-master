@@ -19,14 +19,16 @@
       <h1 class="subtitle uppercase">We're</h1>
       <h1 class="title uppercase">coming soon</h1>
       <p>Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
-      <form action="/" method="post">
+      <form action="" method="post" id="form" onsubmit="redirect();return false">
         <input type="email" id="email" placeholder="Email Address">
         <label for="email"></label>
-        <input type="image" src="images/icon-arrow.svg" alt="">
+        <img class="icon-error" id="icon-error" src="images/icon-error.svg" alt="">
+        <input type="image" src="images/icon-arrow.svg" alt="Submit">
       </form>
     </section>
     <section class="header"></section>
   </main>
   <footer></footer>
+  <script src="script.js"></script>
 </body>
 </html>
