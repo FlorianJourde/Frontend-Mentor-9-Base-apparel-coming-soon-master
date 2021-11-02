@@ -6,8 +6,8 @@ This is a solution to the [Base Apparel coming soon page challenge on Frontend M
 
 ### About
 
-Eighth exercice from Frontend Mentor website. The purpose is to train HTML, CSS.
+Ninth exercice from Frontend Mentor website. The purpose is to train to fondamentals web languages.
 
-**HTML, CSS**
+**HTML, CSS, JS**
 
 [Preview-site](https://florianjourde.github.io/Frontend-Mentor-9-Base-apparel-coming-soon-master)
